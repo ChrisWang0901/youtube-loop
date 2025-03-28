@@ -7,14 +7,26 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "icons": {
+    "16": "icons/guitar-color-icon16.png",
+    "48": "icons/guitar-color-icon48.png",
+    "128": "icons/guitar-color-icon128.png"
+  },
+  "host_permissions": [
+    "*://*.youtube.com/watch*"
+  ], 
   "content_scripts": [
     {
-      "matches": [
-        "*://*.youtube.com/*", 
-        "*://youtube.com/*"
-      ],
-      "js": ["contentScript.js"],
-      "run_at": "document_idle"
+      "matches": ["*://*.youtube.com/watch*"],
+      "all_frames": true,
+      "js": ["contentScript.js"]
     }
-  ]
-} 
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "style.css",
+      "icons/loop-icon.svg"
+    ],
+    "matches": ["*://*.youtube.com/*"]
+  }]
+}

@@ -328,3 +328,9 @@ function activateLoop() {
   }, 500);
 }
 That’s it! This gives you a simple, functional YouTube loop extension. From here, you can add features (like saving user preferences, syncing times, supporting multiple loops, etc.). But for a minimal first pass, the above setup will loop a given segment of a YouTube video based on user-input start and end times.
+
+
+
+- responsive css
+- toggle ui
+- select where to inject

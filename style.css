@@ -1,0 +1,157 @@
+.loop-container {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border: 1px solid #e0e0e0; /* Add a subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.loop-content {
+  margin-top: 1rem;
+}
+.input-group {
+  margin-bottom: 1rem; /* Changed from px to rem for better scaling with font size */
+}
+
+
+.time-inputs {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem; /* Using rem instead of px */
+  flex-wrap: wrap; /* Allow inputs to wrap on very small screens */
+}
+
+.time-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 60px; /* Ensure fields don't get too narrow */
+}
+
+.time-field label {
+  font-size: 0.5rem; /* Using rem instead of px */
+  font-weight: normal;
+  text-align: center;
+}
+
+input {
+  padding: 0.5rem; /* Using rem instead of px */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem; /* Added for better readability */
+}
+.loop-buttons-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.loop-button {
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: center; /* Instead of flex properties */
+  transition: 
+    filter 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.loop-button:hover {
+  filter: brightness(0.9);
+  opacity: 0.95;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);}
+
+.loop-button--primary {
+  background-color: #0077cc;
+  margin-top: 1rem;
+}
+
+.loop-button--apply {
+  background-color: red;
+}
+
+.loop-button--disable {
+  background-color: #ccc;
+}
+
+.status {
+  margin-top: 1rem; /* Using rem instead of px */
+  text-align: center;
+  color: #666;
+}
+
+.hidden {
+  display: none;
+}
+
+.loop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2rem;
+  min-height: 2rem;
+}
+
+
+.loop-icon {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+.dropdown-button {
+  background-color: transparent; /* Changed to transparent to remove white background */
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0; /* Remove padding since we're controlling size with width/height */
+  margin: 0; /* Remove margin */
+  width: 2rem; /* Match loop-icon size */
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.dropdown-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.dropdown-button:hover {
+  background-color: #f4f4f4;
+}
+
+.dropdown-icon-open {
+  transform: rotate(180deg);  /* Rotate icon 180 degrees when open */
+}
+
+.loop-status {
+  font-size: 1rem;
+  font-family: 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;  /* Remove padding to maintain consistent height */
+  line-height: 2rem; /* Match header height */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}

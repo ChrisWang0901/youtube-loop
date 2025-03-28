@@ -64,15 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Try to inject the content script - use try/catch since this might fail if already injected
-        try {
-          await chrome.scripting.executeScript({
-            target: { tabId: tab.id },
-            files: ['contentScript.js']
-          });
-        } catch (error) {
-          console.log('Content script may already be loaded:', error);
-          // Continue anyway as the script might already be there
-        }
+//        try {
+//          await chrome.scripting.executeScript({
+//            target: { tabId: tab.id },
+//            files: ['contentScript.js']
+//          });
+//        } catch (error) {
+//          console.log('Content script may already be loaded:', error);
+//          // Continue anyway as the script might already be there
+//        }
 
         // Request current time from content script with a timeout
         return new Promise((resolve) => {
